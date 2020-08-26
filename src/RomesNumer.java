@@ -1,6 +1,6 @@
 public class RomesNumer extends Number {
-    private final int anInt;
-    private final int anInt2;
+    private int anInt;
+    private int anInt2;
     private int resultInt;
     private String sign = "";
     private String resultString;
@@ -8,8 +8,10 @@ public class RomesNumer extends Number {
 
     RomesNumer(String value1, String value2) {
 
-        this.anInt = convertToInt(value1);
-        this.anInt2 = convertToInt(value2);
+            this.anInt = convertToInt(value1);
+            this.anInt2 = convertToInt(value2);
+
+
     }
 
     private String convertResultToRomes(int n, int r) {
@@ -48,8 +50,8 @@ public class RomesNumer extends Number {
     @Override
     public void div() {
         resultInt = anInt / anInt2;
-            resultString = convertResultToRomes(resultInt, resultInt);
-        }
+        resultString = convertResultToRomes(resultInt, resultInt);
+    }
 
     @Override
     public void mul() {
@@ -74,10 +76,19 @@ public class RomesNumer extends Number {
                 case 'I':
                     valuesInt[i] = 1;
                     break;
+                case 'i':
+                    valuesInt[i] = 1;
+                    break;
                 case 'V':
                     valuesInt[i] = 5;
                     break;
+                case 'v':
+                    valuesInt[i] = 5;
+                    break;
                 case 'X':
+                    valuesInt[i] = 10;
+                    break;
+                case 'x':
                     valuesInt[i] = 10;
                     break;
                 default:
